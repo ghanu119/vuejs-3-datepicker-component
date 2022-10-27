@@ -1,0 +1,105 @@
+.g-calendar {
+    .calendar-container {
+      display: flex;
+  
+      .current-calendar,
+      .next-calendar {
+        flex: 1;
+      }
+      .current-calendar {
+        padding-right: 5px;
+        border-right: #999 1px solid;
+      }
+      .next-calendar {
+        margin-left: 2px;
+        padding-left: 2px;
+      }
+      .next-icon {
+        width: 0; 
+        height: 0; 
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        
+        border-left: 12px solid grey;
+      }
+      .prev-icon {
+        width: 0; 
+        height: 0; 
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent; 
+        
+        border-right:12px solid grey;
+      }
+      .next-icon,
+      .prev-icon{
+        &.disabled{
+          border-right-color: #a7a4a46b;
+          border-left-color: #a7a4a46b;
+        }
+      }
+      // width: 50%;
+      .day-name {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        span {
+          width: 100%;
+          text-align: center;
+          font-weight: 550;
+        }
+      }
+      .month-name {
+        display: flex;
+        // justify-content: space-evenly;
+        padding: 5px;
+        font-size: 22px;
+        font-weight: 480;
+  
+        .prev-icon{
+          padding-left: 7px;
+        } 
+        .month-text {
+          margin: auto;
+          color: #999999;
+        }
+      }
+      .calendar-dates .date-row {
+        display: flex;
+        // justify-content: space-between;
+  
+        .blank-day,
+        .date {
+          width: 14.28%;
+          text-align: center;
+          padding: 7px;
+  
+          &.date-selected-start {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+          }
+          &.date-selected-end {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+          &.date-disabled {
+            background: #7a7575 ;
+            color: #a19c9cf0 ;
+          }
+          &.date-today{
+            background: rgb(67, 237, 182) ;
+            color: rgb(45, 45,45) ;
+            
+          }
+          &.date-highlighted {
+            background: #478f8b9c !important;
+            color: #FFF;
+          }
+          &.date-selected {
+            background: #4fa5a1 !important;
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
