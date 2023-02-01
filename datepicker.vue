@@ -266,15 +266,29 @@
         return Math.ceil(this.nextMonthDates.length / 7);
       },
       blankDays() {
-        const firstDay = moment(this.current_date)
+        let firstDay = moment(this.current_date)
           .subtract(1, "M")
           .startOf("month")
           .day();
-        return firstDay - 1;
+          if( firstDay === 0 ){
+            firstDay = 7;
+        }
+        firstDay = firstDay - 1;
+        if( firstDay < 0 ){
+            firstDay = 0;
+        }
+        return firstDay;
       },
       nextMonthBlankDays() {
-        const firstDay = moment(this.current_date).startOf("M").day();
-        return firstDay - 1;
+        let firstDay = moment(this.current_date).startOf("M").day();
+        if( firstDay === 0 ){
+            firstDay = 7;
+        }
+        firstDay = firstDay - 1;
+        if( firstDay < 0 ){
+            firstDay = 0;
+        }
+        return firstDay;
       },
       nextMonthDates() {
         let startDate = moment(this.current_date).clone().startOf("month");
