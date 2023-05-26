@@ -1,7 +1,7 @@
 
-# vue-3-datepicker-component
+# vuejs-3-datepicker-component
 
-Here is a single Datepicker and date range picker file component for the Vue3. Single date picker can be possible or range selection can also be possible. Can set/iew disabled dates.
+Here is a single Datepicker and date range picker file component for the VueJs-3. Single date picker can be possible or range selection can also be possible. Can set/view disabled dates.
 
 
 
@@ -13,7 +13,7 @@ Here is a single Datepicker and date range picker file component for the Vue3. S
 
 ## Installation
 
-Simply put this component file anywhere inside Vue3 project as we make our custom component. It is too easy to use and integration and also can be modified by self.
+Simply put this component file anywhere inside VueJs-3 project as we make our custom component. It is too easy to use and integration and also can be modified by self.
     
 ## Features
 
